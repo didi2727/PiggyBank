@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">貯金アプリ</string>
+
+    /** Label名 */
+    <string name="target_amount">目標金額</string>
+    <string name="total_amount">合計金額</string>
+
+    /** 金額 */
+    <string name="appear_amount">%1$d 円</string>
+
+    /** message */
+    <string name="result_message">目標達成</string>
+
+    /** Button名 */
+    <string name="start_button">START</string>
+    <string name="restart_button">もう一度playする</string>
+
+</resources>
