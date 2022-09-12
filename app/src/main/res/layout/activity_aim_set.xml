@@ -27,7 +27,10 @@
         app:layout_constraintTop_toBottomOf="@id/registerTargetAmountLabel"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/setButton"
-        app:layout_constraintHorizontal_chainStyle="packed"/>
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:inputType="number"
+        android:digits="0123456789"
+        android:maxLength="7"/>
 
     <Button
         android:id="@+id/setButton"
