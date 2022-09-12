@@ -31,4 +31,9 @@ public class ResultActivity extends AppCompatActivity {
     public void tryAgain(View view){
         startActivity(new Intent(getApplicationContext(), StartActivity.class));
     }
+
+    /** 戻るボタン押させない */
+    @Override
+    public void onBackPressed() {
+    }
 }

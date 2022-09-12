@@ -65,4 +65,9 @@ public class MainActivity extends AppCompatActivity {
     public boolean amountStatus(int total){
         return (total >= targetAmountAppear) ? true : false;
     }
+
+    /** 戻るボタン押させない */
+    @Override
+    public void onBackPressed() {
+    }
 }

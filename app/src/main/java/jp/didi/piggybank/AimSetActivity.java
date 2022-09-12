@@ -39,4 +39,9 @@ public class AimSetActivity extends AppCompatActivity {
 
         startActivity(intent);
     }
+
+    /** 戻るボタン押させない */
+    @Override
+    public void onBackPressed() {
+    }
 }
