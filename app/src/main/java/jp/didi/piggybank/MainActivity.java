@@ -15,6 +15,10 @@ public class MainActivity extends AppCompatActivity {
    int totalAmountCount = 0;
    int targetAmountAppear = 0;
 
+   //public TextView targetAmountLabel = findViewById(R.id.targetAmountLabel);
+   //public TextView totalAmountLabel = findViewById(R.id.totalAmountLabel);
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,10 +43,13 @@ public class MainActivity extends AppCompatActivity {
 
         EditText edit = (EditText)findViewById(R.id.increaseAmount);
         Editable getIncreaseAmount = edit.getText();
-        int increaseAmount = Integer.parseInt(getIncreaseAmount.toString());
 
-        amountCheck(increaseAmount);
-        //startActivity(intent);
+        if (getIncreaseAmount.toString().length() == 0) {
+
+        } else {
+            int increaseAmount = Integer.parseInt(getIncreaseAmount.toString());
+            amountCheck(increaseAmount);
+        }
     }
 
     public void amountCheck(int increase) {
@@ -57,8 +64,13 @@ public class MainActivity extends AppCompatActivity {
             SharedPreferences.Editor editor = sharedPreferences.edit();
             editor.putInt("TOTAL_AMOUNT", totalAmountCount);
             editor.apply();
-            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-            startActivity(intent);
+
+            TextView totalAmountLabel = findViewById(R.id.totalAmountLabel);
+
+            totalAmountLabel.setText(getString(R.string.appear_amount, totalAmountCount));
+            //edittextを空にする処理をここに追加する
+            EditText increaseAmount = findViewById(R.id.increaseAmount);
+            increaseAmount.getEditableText().clear();
         }
     }
 
